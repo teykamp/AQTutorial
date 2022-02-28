@@ -38,7 +38,7 @@ export default {
     check() {
       // error check
       return this.imgNumber % 24 === 13;
-    }
+    },
   },
   watch: {
     item() {
@@ -47,8 +47,8 @@ export default {
       } else {
         this.imgNumber = (Math.round(Math.random() * 24) + 1);
       }
-    }
-  }
+    },
+  },
 }
 </script>
 

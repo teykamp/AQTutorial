@@ -20,7 +20,7 @@
 
 <script>
 
-import TutorialView from './components/TutorialView.vue'
+import TutorialView from './components/TutorialView.vue';
 
 export default {
   name: 'App',
@@ -32,16 +32,16 @@ export default {
     }
   },
   components: {
-    TutorialView
+    TutorialView,
   },
   methods: {
     check() {
       this.isError = !this.$refs.tutorial.check();
       if (!this.isError) {
-        this.itemNum++
+        this.itemNum++;
       }
-    }
-  }
+    },
+  },
 }
 </script>
 
