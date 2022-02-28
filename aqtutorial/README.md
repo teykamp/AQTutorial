@@ -1,5 +1,10 @@
 # aqtutorial
 
+### Authored By
+```
+Thomas Eykamp & Yona Voss-Andreae
+```
+
 ## Project setup
 ```
 npm install
