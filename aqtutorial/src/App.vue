@@ -1,12 +1,25 @@
 <template>
 <div>
+  <!-- Instructions -->
+  <h3 class="instructions">
+    1. Use the left and right buttons to orient the fan away from you. The air should be moving into the screen.
+  </h3>
+  <h3 class="instructions">
+    2. Use the left and right buttons to orient the filter the correct way. Look for arrow indicators on the side of the filter showing the direction of airflow.
+  </h3>
+  <h3 class="instructions">
+    3. Seal the edges with duct tape to increase the efficiency of the filter and to hold the filter close against the fan.
+     The less air that passes around the filter the better.
+  </h3>
+  <!-- Error Check -->
+  <h1 class="error">{{ isError ? "Please orient the item as described in the instructions":"" }}</h1>
+
   <!-- Rotate -->
   <div v-show="!itemArr[itemNum].includes('Text') && !itemArr[itemNum].includes('CombinedFilter') && !itemArr[itemNum].includes('Tape')" class="button-container">
     <button @click="$refs.tutorial.moveImage(false)">Left</button>
     <button @click="$refs.tutorial.moveImage(true)">Right</button>
   </div>
-  <h1>{{ isError ? "ERROR":"" }}</h1>
-  <h1 class="instructions">Instructions go here!</h1>
+
   <!-- Continue -->
   <button v-show="itemNum < itemArr.length-1" @click.left="check()">Continue</button>
   <center>
@@ -71,5 +84,9 @@ button {
 button:hover {
   background-color: rgb(175, 191, 241);
   box-shadow: 1px 1px 2px;
+}
+
+.error {
+  color: red;
 }
 </style>

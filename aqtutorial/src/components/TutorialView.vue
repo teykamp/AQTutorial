@@ -6,13 +6,13 @@
 
         <div v-else-if="item === 'Text1'">
           <pre>
-            Hi this is text1
+Welcome to the DIY fan filter interactive tutorial. Follow the instructions in the top left and press continue to begin.
           </pre>
         </div>
 
         <div v-else>
           <pre>
-          this is text 2
+Thank you for completing the interactive tutorial. For more information please visit our website or follow us on social media.
           </pre>
         </div>  
     
