@@ -33,7 +33,9 @@ export default {
   ],
   methods: {
     moveImage(direction) {
-      direction ? this.imgNumber--:this.imgNumber++;
+      if (direction && this.imgNumber === 0) { 
+          this.imgNumber = 24; 
+      } else { direction ? this.imgNumber--:this.imgNumber++; }
     },
     check() {
       // error check
